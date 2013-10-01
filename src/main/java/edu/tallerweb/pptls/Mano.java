@@ -10,8 +10,11 @@ public class Mano {
 	 * la que determine su condición en el juego.
 	 * @param forma, la Forma que adopta la Mano.
 	 */
+private Forma forma;
+	
 	public Mano(final Forma forma) {
-		throw new RuntimeException("No implementado aún");
+		
+		this.forma = forma;
 	}
 
 	/**
@@ -21,7 +24,25 @@ public class Mano {
 	 * @return un Resultado, de acuerdo al estado del juego.
 	 */
 	public Resultado jugarCon(final Mano otra) {
-		throw new RuntimeException("No implementado aún");
+		
+			int legana_a[][]={{3,4},{4,0},{0,1},{1,2},{2,3}};
+			int columna;
+			if(this.forma.getValor()==otra.forma.getValor()){
+				return Resultado.EMPATA;
+			}else{
+				int fila;
+				fila=this.forma.getValor();
+					for(columna=0;columna<2;columna++){
+						if(legana_a[fila][columna]==otra.forma.getValor()){
+							return Resultado.GANA;
+						}
+					}
+				return Resultado.PIERDE;
+			 }
 	}
-
+		
+		
+						
 }
+
+
