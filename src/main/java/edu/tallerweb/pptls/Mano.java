@@ -38,7 +38,7 @@ private Forma forma;
 
 						for (columna = 0; columna < 2; columna++) {
 
-							if (leganaA[fila][columna] == otra.forma.getValor()){
+							if (leganaA[fila][columna] == otra.forma.getValor()) {
 
 								return Resultado.GANA;
 							}
@@ -47,8 +47,6 @@ private Forma forma;
 						return Resultado.PIERDE;
 				}
 	}
-
-		
 					
 }
 
