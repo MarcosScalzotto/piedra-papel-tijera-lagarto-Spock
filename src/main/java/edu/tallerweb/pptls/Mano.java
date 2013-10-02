@@ -11,9 +11,9 @@ public class Mano {
 	 * @param forma, la Forma que adopta la Mano.
 	 */
 private Forma forma;
-	
-	public Mano(final Forma forma){
-		
+
+	public Mano(final Forma forma) {
+
 		this.forma = forma;
 	}
 
@@ -26,30 +26,30 @@ private Forma forma;
 	public Resultado jugarCon(final Mano otra) {
 		int fila;
 		int columna;
-		int legana_a[][] = {{3,4} , {4,0} , {0,1} , {1,2} , {2,3}};
-			
-			if(this.forma.getValor() == otra.forma.getValor()){
-				
+		int leganaA[][] = {{3 , 4} , {4 , 0} , {0 , 1} , {1 , 2} , {2 , 3}};
+
+			if (this.forma.getValor() == otra.forma.getValor()) {
+
 					return Resultado.EMPATA;
-			   
+
 			}	else {
-						
-						fila=this.forma.getValor();
-						
-						for(columna=0; columna<2; columna++){
-							
-							if(legana_a[fila][columna] == otra.forma.getValor()){
-							
+
+						fila = this.forma.getValor();
+
+						for (columna = 0; columna < 2; columna++) {
+
+							if (leganaA[fila][columna] == otra.forma.getValor()){
+
 								return Resultado.GANA;
 							}
 						}
-				
+
 						return Resultado.PIERDE;
 				}
 	}
+
 		
-		
-						
+					
 }
 
 
